@@ -1,0 +1,35 @@
+.page-shell {
+  min-height: 100vh;
+}
+
+.container,
+.container--narrow {
+  width: min(100% - 2rem, var(--container-max));
+  margin-inline: auto;
+}
+
+.container--narrow {
+  width: min(100% - 2rem, var(--container-narrow));
+}
+
+.section {
+  padding-block: var(--section-padding-y);
+}
+
+.section--tight {
+  padding-block: var(--section-padding-y-tight);
+}
+
+.section--soft {
+  background-color: var(--color-surface-subtle);
+}
+
+@media (min-width: 48rem) {
+  .container {
+    width: min(100% - 3rem, var(--container-max));
+  }
+
+  .container--narrow {
+    width: min(100% - 3rem, var(--container-narrow));
+  }
+}

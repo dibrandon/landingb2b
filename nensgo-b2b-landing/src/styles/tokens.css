@@ -1,0 +1,100 @@
+:root {
+  --font-sans: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+  --brand-blue-light: #63beeb;
+  --brand-blue: #4b8fe7;
+  --brand-blue-dark: #3b5fd6;
+  --brand-purple: #7a49e8;
+  --brand-purple-soft: #9a63e8;
+  --brand-green: #67d3b0;
+  --brand-aqua: #4ccbb5;
+  --brand-yellow: #f5c94a;
+  --brand-yellow-dark: #f8b13d;
+  --brand-orange: #f58a3a;
+  --brand-coral: #f26a4b;
+  --brand-pink: #f38aa2;
+  --text-primary: #3f4a8a;
+  --text-primary-strong: #2f3d73;
+  --text-secondary: #5e6795;
+  --bg-main: #fffdf9;
+  --bg-cream: #f9f6f1;
+  --bg-soft: #f4f7fb;
+  --border-soft: #edeff5;
+  --gradient-nens: linear-gradient(
+    90deg,
+    #63beeb 0%,
+    #4b8fe7 45%,
+    #7a49e8 100%
+  );
+  --gradient-go: linear-gradient(90deg, #f26a4b 0%, #f58a3a 45%, #f5c94a 100%);
+  --gradient-brand: linear-gradient(
+    90deg,
+    #63beeb 0%,
+    #4b8fe7 20%,
+    #7a49e8 40%,
+    #67d3b0 60%,
+    #f5c94a 78%,
+    #f26a4b 100%
+  );
+  --gradient-ribbon: linear-gradient(
+    90deg,
+    #63beeb 0%,
+    #67d3b0 25%,
+    #f5c94a 50%,
+    #f58a3a 75%,
+    #f38aa2 100%
+  );
+  --color-bg: var(--bg-main);
+  --color-surface: #ffffff;
+  --color-surface-muted: var(--bg-cream);
+  --color-surface-subtle: var(--bg-soft);
+  --color-border: var(--border-soft);
+  --color-text: var(--text-primary-strong);
+  --color-text-muted: var(--text-secondary);
+  --color-primary: var(--brand-blue);
+  --color-primary-strong: var(--brand-blue-dark);
+  --color-primary-contrast: #ffffff;
+  --color-secondary: var(--brand-purple);
+  --color-accent-green: var(--brand-green);
+  --color-accent-aqua: var(--brand-aqua);
+  --color-accent-yellow: var(--brand-yellow);
+  --color-accent-orange: var(--brand-orange);
+  --color-accent-coral: var(--brand-coral);
+  --color-accent-pink: var(--brand-pink);
+  --color-focus: rgba(75, 143, 231, 0.24);
+  --color-glow-blue: rgba(99, 190, 235, 0.16);
+  --color-glow-purple: rgba(122, 73, 232, 0.1);
+  --color-glow-coral: rgba(242, 106, 75, 0.1);
+  --color-glow-yellow: rgba(245, 201, 74, 0.1);
+  --color-danger: #d94b5f;
+  --color-success: #3bae84;
+  --color-overlay: rgba(255, 253, 249, 0.94);
+  --color-primary-soft: rgba(75, 143, 231, 0.12);
+  --color-primary-soft-strong: rgba(75, 143, 231, 0.24);
+  --color-page-glow: rgba(99, 190, 235, 0.16);
+  --color-page-gradient-start: #fffdf9;
+  --color-page-gradient-end: #f9f6f1;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 2rem;
+  --space-8: 2.5rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-pill: 999px;
+  --shadow-sm: 0 8px 20px rgba(34, 49, 58, 0.06);
+  --shadow-md: 0 16px 40px rgba(34, 49, 58, 0.12);
+  --shadow-lg: 0 20px 48px rgba(34, 49, 58, 0.14);
+  --container-max: 80rem;
+  --navbar-height: 3.5rem;
+  --header-stack-height: 6.75rem;
+  --transition-fast: 160ms ease;
+  --transition-medium: 220ms ease;
+  --section-padding-y: clamp(4rem, 8vw, 6rem);
+  --section-padding-y-tight: clamp(2.5rem, 5vw, 4rem);
+  --container-narrow: 48rem;
+  --shadow-button: 0 14px 30px rgba(59, 95, 214, 0.18);
+}
