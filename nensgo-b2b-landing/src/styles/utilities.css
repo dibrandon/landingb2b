@@ -35,15 +35,15 @@
 }
 
 .button--secondary {
-  background: rgba(255, 255, 255, 0.72);
-  color: var(--color-text);
-  border-color: var(--color-border);
+  background: var(--color-accent-orange);
+  color: var(--color-primary-contrast);
+  box-shadow: 0 14px 30px rgba(242, 106, 75, 0.22);
 }
 
 .button--secondary:hover,
 .button--secondary:focus-visible {
-  background: rgba(255, 255, 255, 0.9);
-  border-color: var(--color-primary-soft-strong);
+  background: var(--color-accent-coral);
+  transform: translateY(-1px);
 }
 
 .button:focus-visible {
