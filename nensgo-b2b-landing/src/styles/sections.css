@@ -328,7 +328,7 @@ html {
 }
 
 .summary-card--preview {
-  width: min(100%, 26rem);
+  width: min(100%, 24rem);
   justify-self: center;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(244, 247, 251, 0.96) 100%);
@@ -373,7 +373,7 @@ html {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 18rem;
+  max-height: 15rem;
   object-fit: contain;
 }
 
@@ -410,6 +410,185 @@ html {
 .activity-example__button {
   width: 100%;
   min-height: 2.85rem;
+}
+
+.preview-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  padding: clamp(0.75rem, 2vw, 1.5rem);
+  background: rgba(47, 61, 115, 0.18);
+  backdrop-filter: blur(10px);
+}
+
+.preview-modal {
+  width: min(100%, 41rem);
+  max-height: min(92vh, 50rem);
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(75, 143, 231, 0.14);
+  border-radius: calc(var(--radius-lg) + 0.5rem);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.preview-modal__topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 0.9rem;
+  border-bottom: 1px solid rgba(75, 143, 231, 0.1);
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.preview-modal__back,
+.preview-modal__close {
+  border: 1px solid rgba(75, 143, 231, 0.14);
+  background: #ffffff;
+  color: var(--color-text);
+  cursor: pointer;
+  transition:
+    border-color var(--transition-fast),
+    background-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.preview-modal__back:hover,
+.preview-modal__back:focus-visible,
+.preview-modal__close:hover,
+.preview-modal__close:focus-visible {
+  background: rgba(75, 143, 231, 0.06);
+  border-color: rgba(75, 143, 231, 0.22);
+  transform: translateY(-1px);
+}
+
+.preview-modal__back {
+  min-height: 2.6rem;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+}
+
+.preview-modal__close {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.preview-modal__scroll {
+  max-height: calc(min(92vh, 50rem) - 4.4rem);
+  overflow: auto;
+}
+
+.preview-modal__media {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8f5ef;
+  border-bottom: 1px solid rgba(75, 143, 231, 0.1);
+}
+
+.preview-modal__media img {
+  width: 100%;
+  height: auto;
+  max-height: clamp(12rem, 30vh, 17rem);
+  object-fit: contain;
+}
+
+.preview-modal__content {
+  --stack-gap: 1.1rem;
+  padding: 1.15rem 1.2rem 1.3rem;
+}
+
+.preview-modal__category,
+.preview-modal__eyebrow {
+  margin: 0;
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+
+.preview-modal__title {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.65rem);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  color: var(--color-text);
+}
+
+.preview-modal__section {
+  --stack-gap: 0.5rem;
+}
+
+.preview-modal__subheading {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.15;
+  color: var(--color-text);
+}
+
+.preview-modal__text {
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.preview-modal__grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.preview-card,
+.preview-modal__contact {
+  padding: 0.9rem 0.95rem;
+  border-radius: var(--radius-md);
+  background: rgba(249, 246, 241, 0.8);
+  border: 1px solid rgba(75, 143, 231, 0.12);
+}
+
+.preview-card--accent {
+  background: rgba(245, 201, 74, 0.12);
+  border-color: rgba(245, 177, 61, 0.28);
+}
+
+.preview-card__label {
+  margin: 0 0 0.35rem;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.preview-card__value {
+  margin: 0;
+  color: var(--color-text);
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.preview-modal__contact {
+  --stack-gap: 0.55rem;
+}
+
+.preview-modal__contact-button.button {
+  width: 100%;
+  margin-top: 0.15rem;
+  background: #2fd164;
+  color: #ffffff;
+  box-shadow: 0 14px 26px rgba(47, 209, 100, 0.18);
+}
+
+.preview-modal__contact-button.button:hover,
+.preview-modal__contact-button.button:focus-visible {
+  background: #28bf5b;
 }
 
 .benefits-grid {
@@ -582,6 +761,42 @@ html {
   .future-strip__list {
     gap: 0.85rem;
   }
+
+  .preview-overlay {
+    padding: 0.5rem;
+  }
+
+  .preview-modal {
+    width: min(100%, 22.75rem);
+    max-height: calc(100vh - 1rem);
+  }
+
+  .preview-modal__scroll {
+    max-height: calc(100vh - 5.5rem);
+  }
+
+  .preview-modal__topbar {
+    padding: 0.7rem 0.75rem;
+  }
+
+  .preview-modal__back {
+    min-height: 2.45rem;
+    padding-inline: 0.9rem;
+  }
+
+  .preview-modal__close {
+    width: 2.45rem;
+    height: 2.45rem;
+  }
+
+  .preview-modal__content {
+    --stack-gap: 0.95rem;
+    padding: 1rem;
+  }
+
+  .preview-modal__media img {
+    max-height: 11rem;
+  }
 }
 
 @media (min-width: 48rem) {
@@ -601,6 +816,10 @@ html {
 
   .summary-card--preview {
     justify-self: end;
+  }
+
+  .preview-modal__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
