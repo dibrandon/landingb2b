@@ -251,6 +251,7 @@ function ActivityPreviewModal({ open, onClose }) {
 
 function App() {
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
+  const currentYear = new Date().getFullYear();
 
   useEffect(() => {
     if (!isPreviewOpen) {
@@ -620,6 +621,19 @@ function App() {
             </article>
           </div>
         </section>
+
+        <footer className="site-footer" aria-label="Pie de página de NensGo">
+          <div className="container site-footer__inner">
+            <p className="site-footer__brand">NensGo</p>
+            <p className="site-footer__rights">
+              © {currentYear} NensGo. Todos los derechos reservados.
+            </p>
+            <p className="site-footer__note">
+              Los textos, diseños, imágenes y materiales publicados en esta web
+              pertenecen a NensGo o se usan con autorización.
+            </p>
+          </div>
+        </footer>
       </main>
 
       <ActivityPreviewModal
