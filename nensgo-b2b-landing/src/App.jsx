@@ -5,6 +5,7 @@ const FORM_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSe0r8a3Ej3kf3VABHjRSWlyVk99oTxnRdDZ7ZuOgGAVU667rA/viewform";
 
 const navLinks = [
+  { label: "Nuestra historia", href: "#historia" },
   { label: "Qué es", href: "#que-es" },
   { label: "Beneficios", href: "#beneficios" },
   { label: "Participar", href: "#participar" },
@@ -85,6 +86,39 @@ const futureSignals = [
   "Qué tipos de actividades despiertan más interés.",
   "Qué zonas concentran más búsquedas.",
   "Qué fichas generan más clics o contactos.",
+];
+
+const storyIntroParagraphs = [
+  "Somos una familia a la que le encanta hacer planes. Siempre estamos buscando nuevas actividades, propuestas diferentes y experiencias que nos permitan descubrir cosas, compartir tiempo de calidad y, sobre todo, regalarle a nuestro hijo oportunidades para aprender, disfrutar y vivir algo nuevo.",
+];
+
+const storyChallengeParagraphs = [
+  "Con el tiempo fuimos notando algo que seguramente le pasa a muchas familias: encontrar actividades interesantes no siempre es fácil.",
+  "Muchas veces la información está dispersa, incompleta o cuesta muchísimo llegar a propuestas distintas a las de siempre.",
+];
+
+const storyPromptIntro =
+  "También nos pasó que, casi sin querer, empezamos a convertirnos en una especie de referencia para otras familias.";
+
+const storyPrompts = [
+  '"Ustedes que siempre están haciendo cosas... ¿qué nos recomendáis?"',
+  '"¿Tenéis alguna idea para este finde?"',
+  '"¿Dónde encontrasteis esa actividad?"',
+];
+
+const storyOriginBridge =
+  "Y así, entre mensajes, recomendaciones y enlaces compartidos, vimos una necesidad muy clara: ¿por qué no crear un sitio donde todo esto pueda encontrarse de forma más fácil y ordenada?";
+
+const storyClosingParagraphs = [
+  "Por eso NensGo nace con una idea muy simple: ayudar a las familias a descubrir actividades cerca de ellas, dar visibilidad a pequeños proyectos, talleres, espacios y propuestas locales, y reunir en un solo lugar opciones para disfrutar con hijos y en familia.",
+  'Queremos facilitar la búsqueda, inspirar nuevos planes y hacer que encontrar algo para hacer no dependa de tener "el contacto correcto" o de que justo alguien te pase la información.',
+  "Porque creemos que hay muchísimo por descubrir, y que compartirlo también es una forma de construir comunidad.",
+];
+
+const storyMissionPoints = [
+  "Ayudar a las familias a descubrir actividades cerca de ellas.",
+  "Dar visibilidad a pequeños proyectos, talleres, espacios y propuestas locales.",
+  "Reunir en un solo lugar opciones para disfrutar con hijos y en familia.",
 ];
 
 function SectionHeading({ kicker, title, description }) {
@@ -294,12 +328,6 @@ function App() {
                 espacios para peques, este proyecto también es para ti.
               </p>
 
-              <div className="hero__actions">
-                <Button href={FORM_URL} target="_blank">
-                  Unirme al proyecto
-                </Button>
-              </div>
-
               <ul className="hero-points">
                 {heroPoints.map((point) => (
                   <li key={point} className="hero-point">
@@ -337,31 +365,99 @@ function App() {
           </div>
         </section>
 
+        <section id="historia" className="section section--soft">
+          <div className="container content-grid content-grid--feature history-layout">
+            <div className="history-copy stack">
+              <SectionHeading
+                kicker="Nuestra historia"
+                title="Así nació NensGo"
+                description="NensGo nace de una necesidad muy concreta: encontrar actividades bien explicadas, cercanas y distintas a las de siempre."
+              />
+
+              <div className="history-narrative stack">
+                <div className="history-block stack">
+                  {storyIntroParagraphs.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
+
+                <div className="history-block stack">
+                  {storyChallengeParagraphs.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
+
+                <article className="summary-card summary-card--accent history-callout stack">
+                  <p className="summary-card__eyebrow">
+                    Lo empezamos a oír una y otra vez
+                  </p>
+                  <p className="history-callout__lead">{storyPromptIntro}</p>
+
+                  <ul className="history-prompts">
+                    {storyPrompts.map((prompt) => (
+                      <li key={prompt}>{prompt}</li>
+                    ))}
+                  </ul>
+
+                  <p className="history-callout__footer">{storyOriginBridge}</p>
+                </article>
+
+                <div className="history-block stack">
+                  {storyClosingParagraphs.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <aside className="summary-card history-summary stack">
+              <p className="summary-card__eyebrow">Lo que queremos construir</p>
+              <h3 className="summary-card__title">
+                Un lugar más claro para descubrir planes en familia
+              </h3>
+
+              <ul className="simple-list">
+                {storyMissionPoints.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+            </aside>
+          </div>
+        </section>
+
         <section id="que-es" className="section">
           <div className="container content-grid content-grid--feature">
             <div className="stack">
               <SectionHeading
-                kicker="¿Por qué nace NensGo?"
-                title="Para reunir en un solo lugar actividades que hoy están dispersas"
-                description="Muchas familias no llegan a tiempo a propuestas que sí encajan con ellas porque la información aparece repartida, desordenada o poco actualizada."
+                kicker="La idea base"
+                title="Una forma clara, moderna y práctica de descubrir actividades"
+                description="Cada propuesta se presenta en una ficha visual y ordenada para que una familia entienda rápido si encaja con lo que está buscando."
               />
 
               <div className="copy-stack stack">
                 <p>
-                  Nuestro objetivo es hacerlo más fácil: ayudar a las familias a
-                  encontrar opciones cerca de ellas y dar más visibilidad a
-                  quienes ofrecen buenas actividades.
+                  NensGo quiere ser ese lugar donde descubrir planes resulte
+                  sencillo: una experiencia pensada para ver en pocos segundos
+                  qué es cada actividad, para qué edades está pensada y dónde
+                  encontrarla.
                 </p>
                 <p>
-                  La idea no es complicarte con una presencia digital enorme,
-                  sino darte un lugar claro donde tu proyecto se explique bien y
-                  pueda generar interés real.
+                  La ficha que ves aquí resume esa idea: una propuesta bien
+                  presentada, con la información importante a la vista y una
+                  estructura que ayuda a decidir sin tener que rebuscar entre
+                  mensajes, redes o enlaces sueltos.
+                </p>
+                <p>
+                  Buscamos una solución moderna, organizativa y práctica: un
+                  espacio cuidado para las familias y, al mismo tiempo, una
+                  forma clara de mostrar cada proyecto con orden, contexto y
+                  utilidad real.
                 </p>
               </div>
             </div>
 
             <article className="summary-card summary-card--preview stack">
-              <p className="summary-card__eyebrow">Ejemplo de ficha</p>
+              <p className="summary-card__eyebrow">Así se verá una actividad</p>
 
               <article className="activity-example activity-example--card stack">
                 <figure className="activity-example__media">
@@ -462,12 +558,6 @@ function App() {
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-
-              <div className="summary-card__actions">
-                <Button href={FORM_URL} target="_blank" variant="secondary">
-                  Enviar mis datos
-                </Button>
-              </div>
             </article>
           </div>
         </section>
@@ -486,12 +576,6 @@ function App() {
                 explicados y con ganas de formar parte de una plataforma pensada
                 para conectar mejor la oferta con la demanda.
               </p>
-
-              <div className="trust-copy__actions">
-                <Button href={FORM_URL} target="_blank">
-                  Quiero formar parte
-                </Button>
-              </div>
             </div>
 
             <figure className="product-shot">

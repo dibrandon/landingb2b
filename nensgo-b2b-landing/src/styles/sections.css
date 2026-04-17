@@ -186,9 +186,6 @@ html {
   font-size: clamp(1.05rem, 1.45vw, 1.2rem);
 }
 
-.hero__actions,
-.summary-card__actions,
-.trust-copy__actions,
 .cta-band__actions {
   display: flex;
   flex-wrap: wrap;
@@ -346,6 +343,70 @@ html {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-primary-strong);
+}
+
+.history-layout {
+  gap: clamp(1.25rem, 3vw, 2.25rem);
+}
+
+.history-copy {
+  --stack-gap: 1.4rem;
+  max-width: 42rem;
+}
+
+.history-narrative {
+  --stack-gap: 1.2rem;
+}
+
+.history-block {
+  --stack-gap: 0.9rem;
+}
+
+.history-block p,
+.history-callout__lead,
+.history-callout__footer {
+  margin: 0;
+  line-height: 1.72;
+}
+
+.history-callout {
+  --stack-gap: 0.95rem;
+}
+
+.history-callout__lead {
+  color: var(--color-text-muted);
+}
+
+.history-prompts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.history-prompts li {
+  padding: 1rem 1rem 1rem 1.15rem;
+  border-radius: var(--radius-md);
+  border-left: 0.28rem solid var(--color-accent-orange);
+  background: rgba(255, 255, 255, 0.84);
+  color: var(--color-text);
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.history-callout__footer {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.history-summary {
+  width: min(100%, 24rem);
+  justify-self: center;
+}
+
+.history-summary .summary-card__title {
+  max-width: 16ch;
 }
 
 .activity-example {
@@ -742,10 +803,16 @@ html {
     justify-items: start;
   }
 
+  .landing-page #participar {
+    padding-bottom: var(--section-padding-y-tight);
+  }
+
+  .landing-page #producto {
+    padding-top: 0;
+  }
+
   .cta-band__actions,
-  .cta-band__actions .button,
-  .summary-card__actions .button,
-  .trust-copy__actions .button {
+  .cta-band__actions .button {
     width: 100%;
   }
 
@@ -756,6 +823,10 @@ html {
   .future-strip {
     gap: 0.8rem;
     padding: 1.05rem 1.1rem;
+  }
+
+  .history-prompts li {
+    padding: 0.9rem 0.9rem 0.9rem 1rem;
   }
 
   .future-strip__list {
@@ -815,6 +886,10 @@ html {
   }
 
   .summary-card--preview {
+    justify-self: end;
+  }
+
+  .history-summary {
     justify-self: end;
   }
 
