@@ -1,0 +1,22 @@
+{
+  "name": "NensGo",
+  "short_name": "NensGo",
+  "description": "Plataforma de actividades infantiles y familiares.",
+  "start_url": "https://nensgo.com/",
+  "scope": "https://nensgo.com/",
+  "display": "standalone",
+  "background_color": "#fffdf9",
+  "theme_color": "#4b8fe7",
+  "icons": [
+    {
+      "src": "/android-chrome-192x173.png",
+      "sizes": "192x173",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x462.png",
+      "sizes": "512x462",
+      "type": "image/png"
+    }
+  ]
+}

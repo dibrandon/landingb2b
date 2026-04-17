@@ -3,11 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
     <meta
       name="description"
-      content="Landing B2B de NensGo para centros, entidades y profesionales que ofrecen actividades infantiles y familiares."
+      content="NensGo es una plataforma de actividades infantiles y familiares. Esta página presenta nuestra historia, la plataforma que estamos construyendo y la convocatoria abierta para proyectos que quieran participar."
     />
+    <meta
+      name="keywords"
+      content="NensGo, actividades infantiles, actividades familiares, app familias, planes con niños, extraescolares, talleres infantiles, plataforma familiar, convocatoria"
+    />
+    <meta name="author" content="NensGo" />
     <meta name="theme-color" content="#4b8fe7" />
+    <link rel="canonical" href="https://nensgo.com/" />
+    <link rel="alternate" hreflang="es-ES" href="https://nensgo.com/" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="NensGo" />
+    <meta
+      property="og:title"
+      content="NensGo | Plataforma de actividades infantiles y familiares"
+    />
+    <meta
+      property="og:description"
+      content="Presentación de NensGo, la plataforma de actividades infantiles y familiares, con convocatoria abierta para proyectos que quieran participar."
+    />
+    <meta property="og:url" content="https://nensgo.com/" />
+    <meta property="og:image" content="https://nensgo.com/muestra.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="NensGo | Plataforma de actividades infantiles y familiares"
+    />
+    <meta
+      name="twitter:description"
+      content="Presentación de NensGo y convocatoria abierta para proyectos que quieran participar en la plataforma."
+    />
+    <meta name="twitter:image" content="https://nensgo.com/muestra.png" />
     <link
       rel="icon"
       type="image/png"
@@ -37,9 +68,68 @@
       sizes="512x462"
       href="/android-chrome-512x462.png"
     />
-    <title>NensGo para centros y actividades | Landing B2B</title>
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>NensGo | Plataforma de actividades infantiles y familiares</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://nensgo.com/#organization",
+            "name": "NensGo",
+            "url": "https://nensgo.com/",
+            "logo": "https://nensgo.com/android-chrome-512x462.png",
+            "description": "Plataforma de actividades infantiles y familiares."
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://nensgo.com/#website",
+            "url": "https://nensgo.com/",
+            "name": "NensGo",
+            "publisher": {
+              "@id": "https://nensgo.com/#organization"
+            },
+            "inLanguage": "es"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://nensgo.com/#webpage",
+            "url": "https://nensgo.com/",
+            "name": "NensGo | Plataforma de actividades infantiles y familiares",
+            "description": "Presentación de NensGo, la plataforma de actividades infantiles y familiares, con convocatoria abierta para proyectos que quieran participar.",
+            "isPartOf": {
+              "@id": "https://nensgo.com/#website"
+            },
+            "about": {
+              "@id": "https://nensgo.com/#organization"
+            },
+            "inLanguage": "es"
+          },
+          {
+            "@type": "WebApplication",
+            "name": "NensGo",
+            "url": "https://nensgo.com/",
+            "applicationCategory": "LifestyleApplication",
+            "operatingSystem": "Web",
+            "description": "Aplicación y plataforma para descubrir actividades infantiles y familiares cerca de ti."
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
+    <noscript>
+      <section>
+        <h1>NensGo</h1>
+        <p>
+          NensGo es una plataforma de actividades infantiles y familiares.
+          Esta página presenta nuestra historia, la plataforma que estamos
+          construyendo y la convocatoria abierta para proyectos que quieran
+          participar.
+        </p>
+      </section>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

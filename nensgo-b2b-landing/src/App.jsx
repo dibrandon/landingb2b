@@ -290,7 +290,7 @@ function App() {
               />
               <span className="brand__copy">
                 <strong>NensGo</strong>
-                <span>Actividades infantiles y familiares</span>
+                <span>Plataforma de actividades infantiles y familiares</span>
               </span>
             </a>
 
@@ -322,10 +322,13 @@ function App() {
                 Haz que tu propuesta llegue mejor a las familias.
               </h1>
               <p className="hero__description">
-                NensGo quiere reunir en un solo lugar propuestas infantiles y
-                familiares que hoy están dispersas entre redes, grupos y canales
-                poco claros. Si ofreces talleres, deporte, arte, cultura o
-                espacios para peques, este proyecto también es para ti.
+                NensGo es una plataforma de actividades infantiles y familiares
+                que quiere reunir en un solo lugar propuestas que hoy están
+                dispersas entre redes, grupos y canales poco claros. Esta
+                página presenta la visión del proyecto, la plataforma que
+                estamos construyendo y la convocatoria abierta para talleres,
+                deporte, arte, cultura y espacios para peques que quieran
+                sumarse desde el principio.
               </p>
 
               <ul className="hero-points">
